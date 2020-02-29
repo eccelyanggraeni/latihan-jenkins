@@ -1,2 +1,6 @@
-FROM httpd:2.4
-COPY ./public-html/ /usr/local/apapche2/htdocs/
+FROM centos:7
+RUN yum -y install epel-release
+RUN yum -y update
+RUN yum -y install nginx
+EXPOSE 80/tcp
+
